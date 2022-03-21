@@ -1,38 +1,141 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  height: 80vh;
+}
+button {
+  cursor: pointer;
+}
+input {
+  border: 0;
+  outline: none;
+}
+.container {
+  border: 4px solid #333;
+  padding: 1rem 2rem;
+  background: linear-gradient(110deg , #feca57 , #f1c40f);
+}
+.form-container {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container .all-task {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: start;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.title {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 15px;
+  color: #333;
+  margin-bottom: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.title span:nth-child(2) {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  border-radius: 50%;
+  background: linear-gradient(100deg ,#0984e3 , #40a4f0);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alert {
+  position: absolute;
+  border: 2px solid #333;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  width: 100%;
+  top: -2rem;
+}
+.alert.alert-error {
+  background: #ff7979;
+  border-color: red;
+}
+.alert.alert-success {
+  background: #1abc9c;
+  border-color: #16a085;
+}
+.alert.alert-edit {
+  background: #74b9ff;
+  border-color: #0984e3;
+}
+.form-container form {
+  position: relative;
+  margin: 1.5rem 0 0;
+}
+.form-container form input {
+  padding: 5px;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  border-left: 3px solid #333;
+}
+.form-container form .submit-btn {
+  border: 3px solid #333;
+  padding: 5px;
+  background: #f1c40f;
+  font-weight: 600;
+}
+.form-container form .edit-submit {
+  background: #74b9ff;
+}
+.form-container form .submit-btn:hover {
+  background: #0984e3;
+  color: #fff;
+}
+.list-container {
+  margin: 1rem 0;
+}
+.task-list {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  transition: .4s;
+  color: #303030;
+}
+.task-list:hover {
+  background: #ffeaa7aa;
+  border-radius: 6px;
+  box-shadow: -4px 4px 8px rgba(0,0,0,.03);
+  color: #000;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.buttons .remove-btn,
+.buttons .edit-btn {
+  font-size: 1.2rem;
+  border: 3px solid #333;
+  border-radius: 5px;
+  background: #ffeaa7;
+}
+.remove-btn:hover,
+.remove-btn:active {
+  background-color: #ff7979;
+}
+.edit-btn:hover,
+.edit-btn:active {
+  background-color: #40a4f0;
+}
+.clear-btn {
+  background: #ff7979;
+  border: 3px solid #333;
+  padding: 5px;
+  font-weight: 600;
+}
+.clear-btn:hover {
+  background: red;
+  color: #fff;
 }
